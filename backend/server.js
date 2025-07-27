@@ -11,7 +11,14 @@ console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
 console.log('PORT:', process.env.PORT || 3002);
 
 app.use(cors({
-  origin: ['http://localhost:4000'],
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:4000', 
+    'http://localhost:5173',
+    'https://phenomenal-snickerdoodle-6c5ccf.netlify.app',
+    'https://jacoblefkowitz.dev',
+    'https://www.jacoblefkowitz.dev'
+  ],
   credentials: true
 }));
 app.use(express.json());
