@@ -59,7 +59,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="min-h-screen flex items-center justify-center py-20">
       <RevealOnScroll>
-        <div className="px-4 w-full max-w-md sm:max-w-lg lg:max-w-2xl mx-auto">
+        <div className="px-4 w-full max-w-2xl mx-auto">
           <h2
             className="text-3xl font-bold mb-8 bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent text-center"
           >
