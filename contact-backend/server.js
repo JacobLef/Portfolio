@@ -1,4 +1,3 @@
-// server.js - Simplified version that should work
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
@@ -7,16 +6,13 @@ import { Resend } from 'resend';
 const app = express();
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Debug environment variables
 console.log('🔍 Environment check:');
 console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
 console.log('PORT:', process.env.PORT || 3001);
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Health check
 app.get('/', (req, res) => {
   res.json({ 
     message: 'Contact form backend is running!',
@@ -24,7 +20,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// Contact endpoint
 app.post('/api/contact', async (req, res) => {
   try {
     console.log('📧 Received contact form submission:', req.body);
@@ -37,7 +32,7 @@ app.post('/api/contact', async (req, res) => {
 
     const data = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
-      to: ['your-email@example.com'], // REPLACE WITH YOUR EMAIL
+      to: ['jacoblefk@gmail.com'], 
       subject: 'New email from Resend',
       html: `
         <h2>New Contact Form Submission</h2>
