@@ -59,7 +59,7 @@ app.post('/api/contact', async (req, res) => {
 
 const PORT = process.env.PORT || 3002;
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📧 Contact endpoint: http://localhost:${PORT}/api/contact`);
 });
