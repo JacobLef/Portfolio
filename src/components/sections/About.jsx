@@ -113,7 +113,12 @@ export const About = () => {
             <ul className="list-disc list-inside text-gray-300 space-y-2">
               <li>
                 <strong>
-                  Pursuing B.S. Computer Science - Northeastern University (2024-2028)
+                  Pursuing M.S. Software Engineering Systems: Northeastern University (2025-2029)
+                </strong>
+              </li>
+              <li>
+                <strong>
+                  Pursuing B.S. Computer Science: Northeastern University (2024-2028)
                 </strong>
               </li>
               <li>
