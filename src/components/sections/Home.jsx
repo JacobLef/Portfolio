@@ -1,3 +1,5 @@
+import { RevealOnScroll } from "../RevealOnScroll";
+
 /**
  * Constructs the Home page of the website, where a small paragraph describing me is displayed and
  * buttons to redirect to my projects and contact information are listed. 
@@ -5,6 +7,7 @@
 export const Home = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative">
+      <RevealOnScroll>
       <div className="text-center z-10 px-4">
         <h1
           className="text-5xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent leading-right"
@@ -32,6 +35,7 @@ export const Home = () => {
           </a>
         </div>
       </div>
+      </RevealOnScroll>
     </section>
   );
 }

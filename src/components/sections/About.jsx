@@ -1,3 +1,5 @@
+import { RevealOnScroll } from "../RevealOnScroll";
+
 /**
  * Constructs the About page of the Website, containing information regarding my architectural
  * skills, backend skills, software knowledge, languages, education, and work experience.
@@ -34,6 +36,7 @@ export const About = () => {
   ]
   return (
     <section id="about" className="min-h-screen flex items-center justify-center py-20">
+      <RevealOnScroll>
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent text-center">
           About Me
@@ -140,7 +143,8 @@ export const About = () => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      </RevealOnScroll>
     </section>
   );
 }

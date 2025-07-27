@@ -1,9 +1,20 @@
 import { FaGithub } from 'react-icons/fa';
+import { RevealOnScroll } from '../RevealOnScroll';
 
+/**
+ * Constructs the Featured Projects section of the portfolio, displaying the projects I have worked
+ * on, a general description of those projects, the skills that project displayed, and a github
+ * link to the public repository on my Github page.
+ * 
+ * Any projects which are private as they are class projects and thus cannot be public for
+ * academic integrity reasons instead provide a link where anyone who wants access is redirected
+ * to my Contact page, where they can contact me and request access to that specific project. 
+ */
 export const Projects = () =>
 {
   return (
     <section id="projects" className="min-h-screen flex items-center justify-center py-20">
+      <RevealOnScroll>
       <div className="max-w-5xl mx-auto px-4">
         <h2
           className="text-3xl font-bold mb-8 bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent text-center"
@@ -42,6 +53,7 @@ export const Projects = () =>
           </div>
         </div>
       </div>
+      </RevealOnScroll>
     </section>
   );
 }
