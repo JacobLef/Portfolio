@@ -1,3 +1,7 @@
+/**
+ * Constructs the Home page of the website, where a small paragraph describing me is displayed and
+ * buttons to redirect to my projects and contact information are listed. 
+ */
 export const Home = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative">

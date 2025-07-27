@@ -1,3 +1,10 @@
+/**
+ * Constructs the mobile menu for both mobile and desktop users the screen is too small to display
+ * all of the headers on the top of the Menu screen. Instead, it replaces them with a drop down menu
+ * which the user can access with a click.
+ * @param {boolean} menuOpen Is the pop-up menu opened? 
+ * @param {function} setMenuOpen Sets the {@code menuOpen} value to the in-parameter. 
+ */
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
     <div

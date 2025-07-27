@@ -1,5 +1,11 @@
 import { useEffect } from "react";
 
+/**
+ * Constructs the Navigation bar at the top of the screen for when the user is NOT in the 
+ * mobile window viewing mode.
+ * @param {boolean} menuOpen Is the mobile menu open? 
+ * @param {function} setMenuOpen Sets the {@code menuOpen} variable to the in-parameter. 
+ */
 export const NavBar = ({ menuOpen, setMenuOpen }) => { 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";

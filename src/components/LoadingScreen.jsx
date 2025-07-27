@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 
+/**
+ * Constructs the loading screen of the Website, such that it is the first thing any user
+ * will see when they load the website.
+ * @param {function} onComplete Callback function which is to be called once the LoadingScreen is 
+ *                   finished loading. What the callback function done is up to the caller.
+ */
 export const LoadingScreen = ({ onComplete }) => {
   if (typeof onComplete !== "function") {
     throw new Error("The type of the given callback function for LoadingScreen is invalid!");

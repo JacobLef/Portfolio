@@ -1,3 +1,7 @@
+/**
+ * Constructs the About page of the Website, containing information regarding my architectural
+ * skills, backend skills, software knowledge, languages, education, and work experience.
+ */
 export const About = () => {
   const architecturalSkills = [
     "OOP",
