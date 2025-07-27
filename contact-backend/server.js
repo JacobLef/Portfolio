@@ -8,9 +8,12 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 console.log('🔍 Environment check:');
 console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
-console.log('PORT:', process.env.PORT || 3001);
+console.log('PORT:', process.env.PORT || 3002);
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:4000'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -31,7 +34,7 @@ app.post('/api/contact', async (req, res) => {
     }
 
     const data = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
+      from: 'Jacob Portfolio <onboarding@resend.dev>',
       to: ['jacoblefk@gmail.com'], 
       subject: 'New email from Resend',
       html: `
@@ -54,7 +57,7 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
