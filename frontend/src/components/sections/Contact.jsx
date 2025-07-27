@@ -30,7 +30,7 @@ export const Contact = () => {
     try {
       console.log('Sending form data:', formData);
       
-      const response = await fetch('http://localhost:3002/api/contact', {
+      const response = await fetch('https://portfolio-production-7a0f.up.railway.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
