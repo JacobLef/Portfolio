@@ -1,6 +1,11 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { useState } from "react";
 
+/**
+ * Constructs the Contact form page where any user can enter a valid email address, their name,
+ * and whatever message they would like to send. Once sent, the email goes through the Resend
+ * server and is redirected my mailbox. 
+ */
 export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
